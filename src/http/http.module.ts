@@ -5,4 +5,5 @@ import { UtilService } from './service/impl/util.service'; // 导入自定义的
 @Module({
     providers: [HttpService, UtilService], // 声明该模块提供的服务，包括HttpService和UtilService
     exports: [HttpService, UtilService], // 声明该模块导出的服务，以便其他模块可以访问它们
-  })
+})
+export class HttpModule { }
