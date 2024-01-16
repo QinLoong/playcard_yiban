@@ -9,3 +9,4 @@ import { IndexService } from './service/impl/index.service';
     providers: [IndexService],
     exports: [IndexService],
 })
+export class IndexModule {}
