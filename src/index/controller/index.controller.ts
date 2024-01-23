@@ -3,4 +3,5 @@ import { SchedulerRegistry } from '@nestjs/schedule'; // 导入NestJS Schedule�
 import { IndexService } from '../service/impl/index.service'; // 导入自定义的IndexService
 @Controller() // 使用Controller装饰器，将该类标记为NestJS的控制器类
 export class IndexController {
+    private readonly logger = new Logger(IndexController.name); // 创建一个Logger实例，用于记录日志信息
 }
