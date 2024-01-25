@@ -6,6 +6,6 @@ export class IndexController {
     private readonly logger = new Logger(IndexController.name); // 创建一个Logger实例，用于记录日志信息
     constructor(
         private readonly appService: IndexService, // 注入IndexService实例，用于处理业务逻辑
-        
+        private readonly schedulerRegistry: SchedulerRegistry, // 注入SchedulerRegistry实例，用于管理定时任务
       ) {}
 }
