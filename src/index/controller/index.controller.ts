@@ -9,3 +9,8 @@ export class IndexController {
         private readonly schedulerRegistry: SchedulerRegistry, // 注入SchedulerRegistry实例，用于管理定时任务
       ) {}
 }
+
+/*这段代码定义了一个名为IndexController的NestJS控制器类。控制器类通常用于处理HTTP请求，
+并调用相关的服务来执行业务逻辑。在构造函数中，它注入了IndexService实例和SchedulerRegistry实例，
+以便在控制器方法中可以使用它们来处理请求和管理定时任务。控制器还创建了一个Logger实例，用于记录日志信息，
+以便跟踪应用程序的行为。*/
