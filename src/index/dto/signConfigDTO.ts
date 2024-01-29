@@ -5,4 +5,11 @@ export type signFormData = {
      * @link DailySignSubmitRequest.dkdz
      */
     address?: string;
-  };
+    /**
+     * 经纬度坐标
+     * 百度火星坐标
+     * @example 113.014999,25.7706
+     * @link DailySignSubmitRequest.dkdzZb
+     */
+    position?: string;
+};
