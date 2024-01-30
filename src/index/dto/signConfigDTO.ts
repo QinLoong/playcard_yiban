@@ -12,4 +12,10 @@ export type signFormData = {
      * @link DailySignSubmitRequest.dkdzZb
      */
     position?: string;
+    /**
+   * 打开所在县
+   * @example 湖南省郴州市
+   * @link DailySignSubmitRequest.dkd
+   */
+    signAddress?: string;
 };
