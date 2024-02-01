@@ -24,4 +24,10 @@ export type signFormData = {
    * @link DailySignSubmitRequest['jzdSheng.dm']
    */
     provinceZipCode?: string;
+    /**
+   * 现居住地 市邮政编码
+   * @example 431000
+   * @link DailySignSubmitRequest['jzdShi.dm']
+   */
+  cityZipCode?: string;
 };
