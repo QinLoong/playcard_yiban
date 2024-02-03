@@ -36,4 +36,10 @@ export type signFormData = {
    * @link DailySignSubmitRequest['jzdXian.dm']
    */
   countyZipCode?: string;
+  /**
+   * 现居住地 详细地址
+   * @example 湖南省郴州资兴市鲤鱼江鸿都商业步行街
+   * @link DailySignSubmitRequest.jzdDz
+   */
+  habitationDetailDesc?: string;
 };
