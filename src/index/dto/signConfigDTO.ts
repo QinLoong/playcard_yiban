@@ -55,3 +55,10 @@ export type signFormData = {
    */
   phone: string;
 };
+
+export type SignConfig = {
+    account: {
+      account: string;
+      password: string;
+    };
+  }[];
