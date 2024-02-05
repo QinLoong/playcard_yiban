@@ -48,4 +48,10 @@ export type signFormData = {
    * @link DailySignSubmitRequest.jzdDz2
    */
   usualResidenceDetailDesc?: string;
+  /**
+   * 联系电话
+   * @example 15971115555
+   * @link DailySignSubmitRequest.lxdh
+   */
+  phone: string;
 };
