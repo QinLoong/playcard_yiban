@@ -61,4 +61,8 @@ export type SignConfig = {
       account: string;
       password: string;
     };
+    /**
+   * 签到表单信息
+   */
+  dailySignFormData: signFormData;
   }[];
