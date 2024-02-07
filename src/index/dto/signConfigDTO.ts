@@ -65,4 +65,8 @@ export type SignConfig = {
    * 签到表单信息
    */
   dailySignFormData: signFormData;
+  /**
+   * 晚归签到表单信息
+   */
+  apartmentSignFormData: unknown;
   }[];
