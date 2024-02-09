@@ -1,0 +1,1 @@
+import { DailySignSubmitRequest } from '../../user/dto/dailySignSubmit.dto'; // 导入DailySignSubmitRequest类型
