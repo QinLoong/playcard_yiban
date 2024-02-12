@@ -2,3 +2,6 @@ import { DailySignSubmitRequest } from '../../user/dto/dailySignSubmit.dto'; // 
 import { signFormData } from './signConfigDTO'; // 导入signFormData类型
 // 创建一个类型，表示signFormData的字段名称
 type signFormDataKey = keyof signFormData;
+
+// 创建一个类型，表示DailySignSubmitRequest的字段名称
+type DailySignSubmitRequestKey = keyof DailySignSubmitRequest;
