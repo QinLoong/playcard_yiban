@@ -5,3 +5,8 @@ type signFormDataKey = keyof signFormData;
 
 // 创建一个类型，表示DailySignSubmitRequest的字段名称
 type DailySignSubmitRequestKey = keyof DailySignSubmitRequest;
+
+// 创建一个类型，表示从signFormData字段到DailySignSubmitRequest字段的映射关系
+export type SignConfig2DailySignSubmitRequestDTOMappingType = {
+    [k in signFormDataKey]: DailySignSubmitRequestKey;
+  };
