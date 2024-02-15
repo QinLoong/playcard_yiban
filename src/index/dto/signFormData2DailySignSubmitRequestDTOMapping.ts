@@ -24,3 +24,9 @@ export const SignFormData2DailySignSubmitRequestDTOMapping: SignConfig2DailySign
     usualResidenceDetailDesc: 'jzdDz2',
     phone: 'lxdh',
   };
+// 函数将signFormData映射为Partial<DailySignSubmitRequest>类型
+export function signForm2DailySignSubmitRequestDTOMapping(
+    config: signFormData,
+  ) {
+    const res: Partial<DailySignSubmitRequest> = {};
+  }
