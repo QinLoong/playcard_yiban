@@ -29,4 +29,11 @@ export function signForm2DailySignSubmitRequestDTOMapping(
     config: signFormData,
   ) {
     const res: Partial<DailySignSubmitRequest> = {};
+  
+    // 遍历config的每个字段，将其映射到DailySignSubmitRequest字段
+    for (const configKey in config) {
+      res[SignFormData2DailySignSubmitRequestDTOMapping[configKey]] =
+        config[configKey];
+    }
+  
   }
