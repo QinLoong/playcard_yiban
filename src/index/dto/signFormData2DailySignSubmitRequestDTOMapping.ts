@@ -36,4 +36,6 @@ export function signForm2DailySignSubmitRequestDTOMapping(
         config[configKey];
     }
   
+    // 返回映射后的结果
+    return res;
   }
