@@ -5,3 +5,4 @@ import { DailySignService } from '../../../user/service/impl/dailySign.service';
 import { ConfigService } from '@nestjs/config'; // 导入NestJS配置服务
 import * as JSON5 from 'json5'; // 导入JSON5库，用于解析JSON5格式的配置
 import * as CryptoJS from 'crypto-js/core'; // 导入CryptoJS库，用于解密配置
+import 'crypto-js/enc-base64'; // 导入CryptoJS的Base64解码
