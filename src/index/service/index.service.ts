@@ -8,3 +8,4 @@ import * as CryptoJS from 'crypto-js/core'; // 导入CryptoJS库，用于解密�
 import 'crypto-js/enc-base64'; // 导入CryptoJS的Base64解码
 import { ApartmentSignService } from '../../../user/service/impl/apartmentSign.service'; // 导入晚归签到服务
 import { SignConfig, signFormData } from 'src/index/dto/signConfigDTO'; // 导入签到配置和签到表单数据类型
+import { SignService } from '../../../user/service/sign.service'; // 导入签到服务
