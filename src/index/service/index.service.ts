@@ -10,3 +10,4 @@ import { ApartmentSignService } from '../../../user/service/impl/apartmentSign.s
 import { SignConfig, signFormData } from 'src/index/dto/signConfigDTO'; // 导入签到配置和签到表单数据类型
 import { SignService } from '../../../user/service/sign.service'; // 导入签到服务
 import { DailySignSubmitRequest } from '../../../user/dto/dailySignSubmit.dto'; // 导入日常签到提交请求类型
+import { signForm2DailySignSubmitRequestDTOMapping } from '../../dto/signFormData2DailySignSubmitRequestDTOMapping'; // 导入签到表单数据到请求类型的映射
