@@ -12,3 +12,5 @@ import { SignService } from '../../../user/service/sign.service'; // 导入签�
 import { DailySignSubmitRequest } from '../../../user/dto/dailySignSubmit.dto'; // 导入日常签到提交请求类型
 import { signForm2DailySignSubmitRequestDTOMapping } from '../../dto/signFormData2DailySignSubmitRequestDTOMapping'; // 导入签到表单数据到请求类型的映射
 import { UtilService } from '../../../http/service/impl/util.service'; // 导入工具服务
+
+@Injectable() // 使用NestJS的Injectable装饰器，将该类标记为一个可注入的服务
