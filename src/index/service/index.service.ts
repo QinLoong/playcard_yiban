@@ -16,5 +16,7 @@ import { signForm2DailySignSubmitRequestDTOMapping } from '../../dto/signFormDat
 export class IndexService {
     private readonly logger = new Logger(IndexService.name); // 创建一个Logger实例，用于记录日志信息
 
+    private readonly signConfig: SignConfig = []; // 存储签到配置信息的数组
 
+    
 }
