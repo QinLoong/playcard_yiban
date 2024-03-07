@@ -18,5 +18,7 @@ export class IndexService {
 
     private readonly signConfig: SignConfig = []; // 存储签到配置信息的数组
 
-    
+    private accountData: IUserOptions; // 存储用户选项的数据
+
+
 }
