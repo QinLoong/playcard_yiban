@@ -20,5 +20,10 @@ export class IndexService {
 
     private accountData: IUserOptions; // 存储用户选项的数据
 
+    constructor(
+        private readonly dailySignService: DailySignService, // 注入日常签到服务
+      ) {
+       
+      }
 
 }
