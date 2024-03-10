@@ -23,6 +23,7 @@ export class IndexService {
     constructor(
         private readonly dailySignService: DailySignService, // 注入日常签到服务
         private readonly apartmentSignService: ApartmentSignService, // 注入晚归签到服务
+        private readonly configService: ConfigService, // 注入NestJS配置服务
 
       ) {
        
