@@ -26,7 +26,7 @@ export class IndexService {
         private readonly configService: ConfigService, // 注入NestJS配置服务
         private readonly utilService: UtilService, // 注入工具服务
       ) {
-       
+        this.signConfig = this.getSignConfig(); // 从配置中获取签到配置信息并存储在signConfig中
       }
 
 }
