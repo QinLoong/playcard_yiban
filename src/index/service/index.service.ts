@@ -29,4 +29,7 @@ export class IndexService {
         this.signConfig = this.getSignConfig(); // 从配置中获取签到配置信息并存储在signConfig中
       }
 
+      // 从配置中获取签到配置信息
+  private getSignConfig(): SignConfig {
+  }
 }
