@@ -31,5 +31,17 @@ export class IndexService {
 
       // 从配置中获取签到配置信息
   private getSignConfig(): SignConfig {
+    try {
+      if (this.configService.get('SIGN_CONFIG_BASE64')) {
+        // 尝试解析BASE64编码的配置信息
+        return JSON5.parse(
+          CryptoJS.enc.Base64.parse(
+            this.configService.get<string>('SIGN_CONFIG_BASE64'),
+          ).toString(CryptoJS.enc.Utf8),
+        );
+      }
+    } catch (e) {
+      this.logger.error('SIGN_CONFIG_BASE64配置解析错误: ' + e.toString());
+    }
   }
 }
