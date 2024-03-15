@@ -43,5 +43,13 @@ export class IndexService {
     } catch (e) {
       this.logger.error('SIGN_CONFIG_BASE64配置解析错误: ' + e.toString());
     }
+    try {
+      // 尝试解析普通的JSON配置信息
+      const config = this.configService.get<string>('SIGN_CONFIG');
+      return JSON5.parse(config);
+    } catch (e) {
+      this.logger.error('SIGN_CONFIG配置解析错误: ' + e.toString());
+    }
+    return [];
   }
 }
