@@ -52,4 +52,13 @@ export class IndexService {
     }
     return [];
   }
+
+  // 通用的签到逻辑
+  protected async commonSign(
+    loadUserGenerator: Generator,
+    signService: SignService,
+    loggerName: string,
+  ) {
+    
+  }
 }
