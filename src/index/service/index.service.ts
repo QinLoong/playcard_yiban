@@ -59,6 +59,7 @@ export class IndexService {
     signService: SignService,
     loggerName: string,
   ) {
-    
+    this.utilService.getServiceIp(true); // 获取服务IP并记录到日志
+
   }
 }
