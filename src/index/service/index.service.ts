@@ -64,7 +64,7 @@ export class IndexService {
     let param = it.next();
     while (!param.done && param.value) {
       signService.setUser(this.accountData); // 设置用户选项
-      const loginStatus = await signService.doLogin(); // 执行登录操作
+      const loginStatus = await signService.doLogin(); // 执行登录操
       
     }
   }
