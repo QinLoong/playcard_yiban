@@ -64,8 +64,18 @@ export class IndexService {
     let param = it.next();
     while (!param.done && param.value) {
       signService.setUser(this.accountData); // 设置用户选项
-      const loginStatus = await signService.doLogin(); // 执行登录操
-      
+      const loginStatus = await signService.doLogin(); // 执行登录操作
+      const currentUserSummary = this.accountData.account.substring(
+        this.accountData.account.length - 4,
+      );
+      if (loginStatus !== true) {
+        // 如果登录失败，记录警告日志
+        this.logger.warn(
+          `[${currentUserSummary}]登录失败: ${loginStatus?.msg}`,
+        );
+        param = it.next();
+        continue;
+      }
     }
   }
 }
