@@ -76,6 +76,13 @@ export class IndexService {
         param = it.next();
         continue;
       }
+      const res = await signService.doSign(param.value); // 执行签到操作
+      this.logger.log(
+        `[${currentUserSummary}] [${loggerName}]: ${
+          res.result ? '成功' : '失败'
+        } 返回消息: ${res?.message}`,
+      );
+      param = it.next();
     }
   }
 }
