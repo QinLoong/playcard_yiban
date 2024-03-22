@@ -85,4 +85,18 @@ export class IndexService {
       param = it.next();
     }
   }
+
+   /**
+   * 日常打卡定时任务
+   */
+   @Cron('0 1 6 * * *')
+   async dailySign() {
+     this.logger.log('===========日常打卡开始');
+     const it = this.loadUser(
+       'dailySignFormData',
+       signForm2DailySignSubmitRequestDTOMapping,
+     );
+     await this.commonSign(it, this.dailySignService, '日常打卡');
+     this.logger.log('===========日常打卡结束');
+   }
 }
