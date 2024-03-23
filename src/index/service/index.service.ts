@@ -99,4 +99,15 @@ export class IndexService {
      await this.commonSign(it, this.dailySignService, '日常打卡');
      this.logger.log('===========日常打卡结束');
    }
+
+   /**
+   * 晚归签到定时任务
+   
+  @Cron('0 2 22 * * *')
+  async apartmentSign() {
+    this.logger.log('===========晚归签到开始');
+    const it = this.loadUser('apartmentSignFormData');
+    await this.commonSign(it, this.apartmentSignService, '晚归打卡');
+    this.logger.log('===========晚归签到结束');
+  }*/
 }
