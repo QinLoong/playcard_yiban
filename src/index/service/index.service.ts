@@ -110,4 +110,13 @@ export class IndexService {
     await this.commonSign(it, this.apartmentSignService, '晚归打卡');
     this.logger.log('===========晚归签到结束');
   }*/
+
+    //周日到周四
+  @Cron('0 53 22 * * *')
+  async apartmentSign() {
+    this.logger.log('===========晚归签到开始');
+    const it = this.loadUser('apartmentSignFormData');
+    await this.commonSign(it, this.apartmentSignService, '晚归打卡');
+    this.logger.log('===========晚归签到结束');
+  }
 }
