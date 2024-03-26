@@ -128,4 +128,15 @@ export class IndexService {
     await this.commonSign(it, this.apartmentSignService, '晚归打卡');
     this.logger.log('===========晚归签到结束');
   }
+
+  // 生成用户迭代器
+  private *loadUser<T extends keyof SignConfig[number]>(
+    key: T,
+    translateFn?: (formData: SignConfig[number][T]) => unknown,
+  ) {
+    for (const signConfigElement of this.signConfig) {
+      this.accountData = signConfigElement.account;
+     
+    }
+  }
 }
