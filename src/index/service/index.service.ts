@@ -136,7 +136,8 @@ export class IndexService {
   ) {
     for (const signConfigElement of this.signConfig) {
       this.accountData = signConfigElement.account;
-     
+      if (translateFn) yield translateFn(signConfigElement[key]);
+      else yield signConfigElement[key];
     }
   }
 }
