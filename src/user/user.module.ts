@@ -17,3 +17,4 @@ import { DailySignApiService } from './api/dailySignApi.service';
     ],
     exports: [DailySignService, ApartmentSignService],
   })
+  export class UserModule {}
