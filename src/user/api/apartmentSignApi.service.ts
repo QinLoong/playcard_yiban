@@ -6,3 +6,7 @@ import {
   TaskScopeRequest,
   TaskScopeResponse,
 } from '../dto/taskScope.dto'; // 导入任务范围请求和响应数据类型
+import {
+  SubmitSignRequest,
+  SubmitSignResponse,
+} from '../dto/apartmentSignSubmit.dto'; // 导入提交签到请求和响应数据类型
