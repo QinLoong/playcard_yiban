@@ -10,3 +10,7 @@ import {
   SubmitSignRequest,
   SubmitSignResponse,
 } from '../dto/apartmentSignSubmit.dto'; // 导入提交签到请求和响应数据类型
+import {
+  apartmentSignListResponse,
+  getApartmentSignListRequest,
+} from '../dto/apartmentSignList.dto'; // 导入公寓签到列表响应和获取列表请求数据类型
