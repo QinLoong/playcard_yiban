@@ -17,3 +17,9 @@ import {
 import * as formurlencoded from 'form-urlencoded'; // 导入form-urlencoded库，用于处理表单数据编码
 
 @Injectable() // 使用NestJS的Injectable装饰器，将该类标记为一个可注入的服务
+export class ApartmentSignApiService {
+  private readonly logger = new Logger(ApartmentSignApiService.name); // 创建一个Logger实例，用于记录日志信息
+
+  
+}
+
