@@ -34,6 +34,24 @@ export class ApartmentSignApiService {
     return res.data;
   }
 
+  // 提交签到
+  async submitSign(param: SubmitSignRequest) {
+    const res = await this.httpService
+      .getInstance()
+      .post<SubmitSignResponse>(
+        ApartmentSignApiEnum.submitSign,
+        formurlencoded(param), // 将参数编码为form-urlencoded格式
+        {
+          params: {
+            _t_s_: Date.now().toString(),
+          },
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          },
+        },
+      );
+    return res.data;
+  }
 
 }
 
