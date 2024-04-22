@@ -53,5 +53,16 @@ export class ApartmentSignApiService {
     return res.data;
   }
 
+  // 获取签到列表
+  async getSignList() {
+    const res = await this.httpService
+      .getInstance()
+      .get<apartmentSignListResponse>(ApartmentSignApiEnum.signList, {
+        params: getApartmentSignListRequest(),
+      });
+    return res.data;
+  }
+
+
 }
 
