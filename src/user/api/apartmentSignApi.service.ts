@@ -63,6 +63,11 @@ export class ApartmentSignApiService {
     return res.data;
   }
 
-
+  // 检查是否可签到
+  async isAvailableSign() {
+    const data = await this.getSignList();
+    if (data.aaData.length === 0) return false; // 如果签到列表为空，返回false
+    return !data.aaData[0].QDSJ; // 检查签到时间字段，如果为空则返回true，否则返回false
+  }
 }
 
