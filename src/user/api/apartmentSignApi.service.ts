@@ -71,3 +71,13 @@ export class ApartmentSignApiService {
   }
 }
 
+
+/*这段代码定义了一个名为 ApartmentSignApiService 的 NestJS 服务，用于处理与公寓签到相关的API请求。
+它依赖于 HttpService 来发送HTTP请求，并包括以下主要功能：
+
+getTaskScope：获取任务范围的信息。
+submitSign：提交签到请求，并将参数编码为 application/x-www-form-urlencoded 格式。
+getSignList：获取签到列表的信息。
+isAvailableSign：检查是否可以进行签到，根据签到时间字段的情况返回布尔值。
+这个服务用于与公寓签到的后端API进行通信，并处理相关的数据请求和响应。*/
+
