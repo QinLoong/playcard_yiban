@@ -10,4 +10,7 @@ import {
 } from '../dto/dailySignSubmit.dto'; // 导入日常签到提交请求和响应数据类型
 
 @Injectable() // 使用NestJS的Injectable装饰器，将该类标记为一个可注入的服务
+export class DailySignApiService {
+  private readonly logger = new Logger(); // 创建一个Logger实例，用于记录日志信息
 
+}
