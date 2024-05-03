@@ -13,4 +13,23 @@ import {
 export class DailySignApiService {
   private readonly logger = new Logger(); // 创建一个Logger实例，用于记录日志信息
 
+  constructor(private readonly httpService: HttpService) {}
+
+  // 获取签到页面
+  async getSignPage() {
+    const res = await this.httpService
+      .getInstance()
+      .get(DailySignApiEnum.signPageApi, {
+        params: {
+          _t_s_: Date.now(),
+        },
+        headers: {
+          Referer: `http://xggl.hnie.edu.cn/wap/menu/student/temp/zzdk?_t_s_=${
+            Date.now() - 3
+          }`,
+        },
+      });
+    return res.data;
+  }
+
 }
