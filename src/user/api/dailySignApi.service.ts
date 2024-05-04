@@ -32,4 +32,27 @@ export class DailySignApiService {
     return res.data;
   }
 
+  // 提交签到
+  async submitSign(
+    param: Omit<DailySignSubmitRequest, 'zzdk_token'>,
+    token: string,
+  ) {
+    const res = await this.httpService
+      .getInstance()
+      .post<DailySignSubmitResponse>(
+        DailySignApiEnum.patchSignApi,
+        formurlencoded({
+          ...param,
+          zzdk_token: token,
+        } as DailySignSubmitRequest),
+        {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          },
+        },
+      );
+    return res.data;
+  }
+
+
 }
