@@ -54,5 +54,22 @@ export class DailySignApiService {
     return res.data;
   }
 
-
+  // 获取签到日志
+  async getSignLog() {
+    const result = await this.httpService
+      .getInstance()
+      .get<SignLogResponse>(DailySignApiEnum.signLogApi, {
+        params: {
+          bSortable_0: false,
+          bSortable_1: true,
+          iSortingCols: 1,
+          iDisplayStart: 0,
+          iDisplayLength: 12,
+          iSortCol_0: 1,
+          sSortDir_0: 'desc',
+          _t_s_: Date.now(),
+        } as SignLogRequest,
+      });
+    return result.data;
+  }
 }
