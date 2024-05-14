@@ -12,5 +12,8 @@ export class SignApiService {
    * 预请求，先访问一次登录页面
    * @private
    */
+  preRequest(indexPageUrl) {
+    return this.httpService.getInstance().get(indexPageUrl); // 发送GET请求访问登录页面
+  }
 
 }
