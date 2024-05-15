@@ -16,4 +16,19 @@ export class SignApiService {
     return this.httpService.getInstance().get(indexPageUrl); // 发送GET请求访问登录页面
   }
 
+  // 登录操作
+  async login(account: string, password: string, loginApi: string) {
+    const param = new URLSearchParams(); // 创建URLSearchParams对象，用于构建登录请求参数
+    param.append('uname', account); // 添加用户名参数
+    param.append('pd_mm', password); // 添加密码参数
+    const result = await this.httpService
+      .getInstance()
+      .post<LoginResponse>(loginApi, param, {
+        headers: {
+          Origin: 'http://ssgl.hnie.edu.cn',
+          Referer: 'http://ssgl.hnie.edu.cn/index',
+        },
+      }); // 发送POST请求执行登录操作
+    return result.data; // 返回登录响应数据
+  }
 }
