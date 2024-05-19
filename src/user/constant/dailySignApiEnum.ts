@@ -7,4 +7,5 @@ export class DailySignApiEnum {
   static patchSignApi = `${dailySignApiPrefix}/content/student/temp/zzdk`;
 }
 
+export const apartmentSignApiPrefix = `http://ssgl.hnie.edu.cn`;
 
