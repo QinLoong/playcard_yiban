@@ -8,4 +8,12 @@ export class DailySignApiEnum {
 }
 
 export const apartmentSignApiPrefix = `http://ssgl.hnie.edu.cn`;
-
+export class ApartmentSignApiEnum {
+  static indexPageUrl = `${apartmentSignApiPrefix}/wap/main/welcome`;
+  static loginApi = `${apartmentSignApiPrefix}/website/login`;
+  /**
+   * 获取签到范围
+   */
+  static getTaskScope = `${apartmentSignApiPrefix}/content/gygl/sign/stu/task/scopes`;
+  
+}
