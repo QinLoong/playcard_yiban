@@ -15,5 +15,9 @@ export class ApartmentSignApiEnum {
    * 获取签到范围
    */
   static getTaskScope = `${apartmentSignApiPrefix}/content/gygl/sign/stu/task/scopes`;
-  
+  /**
+   * 提交签到
+   */
+  static submitSign = `${apartmentSignApiPrefix}/content/gygl/sign/stu/sign`;
+  static signList = `${apartmentSignApiPrefix}/content/tabledata/gygl/sign/stu/sign`;
 }
