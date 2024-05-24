@@ -49,5 +49,16 @@ export type apartmentSignListRequest = {
     JLDM?: any;
     QDWZ_DZ?: any;
     BQ_IND?: any;
+    /**
+     * 签到时间
+     * 如果是 null 则为未签到
+     */
+    QDSJ?: null | string;
+    FBR: string;
+    SUBJECT: string;
+    BQSJ?: any;
+    WG_IND?: any;
+    KSSJ: string;
+    ISFZR: string;
   };
   
