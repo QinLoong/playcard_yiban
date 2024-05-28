@@ -9,6 +9,15 @@ export type SubmitSignResponse = {
      * @example 16632903199821049443
      */
     dm: string;
+    /**
+     * @example 16638588000501838964
+     */
+    sjdm: string;
+    /**
+     * 经纬度
+     * @example "112.944,27.8296"
+     */
+    zb: string;
 
   };
   
