@@ -18,6 +18,11 @@ export type SubmitSignResponse = {
      * @example "112.944,27.8296"
      */
     zb: string;
+    /**
+     * 位置，中文
+     * @example 湖南省湘潭市岳塘区湘潭大道辅路
+     */
+    wz: string;
 
   };
   
