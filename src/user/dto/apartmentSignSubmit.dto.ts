@@ -23,6 +23,11 @@ export type SubmitSignResponse = {
      * @example 湖南省湘潭市岳塘区湘潭大道辅路
      */
     wz: string;
+    /**
+     * 位置来源
+     * @example baidu
+     */
+    ly: string;
 
   };
   
