@@ -28,7 +28,16 @@ export type SubmitSignResponse = {
      * @example baidu
      */
     ly: string;
-
+    /**
+     * @example 0
+     */
+    qdwzZt: string;
+    /**
+     * 距离
+     * @example 1941.8999999999996
+     */
+    fwwDistance: string;
+    operationType: string;
   };
   
   export function getSubmitSignRequest(
