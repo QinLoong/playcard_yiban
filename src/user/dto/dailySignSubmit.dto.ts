@@ -55,5 +55,52 @@ export type DailySignSubmitResponse = {
     dm: string;
   };
   
-
+  export function getDailySignRequestParam(
+    obj: Partial<DailySignSubmitRequest>,
+  ): Omit<DailySignSubmitRequest, 'zzdk_token'> {
+    return Object.assign(
+      {
+        /**
+         * 打卡位置
+         */
+        dkdz: '湖南省 湘潭市 岳塘区 至善路 154号 靠近明德公寓1栋学生公寓 ',
+        dkdzZb: '112.934325,27.84791',
+      
+      },
+      obj,
+    );
+  }
+  
+  export type SignLogRequest = {
+    bSortable_0: false;
+    bSortable_1: true;
+    iSortingCols: 1;
+    iDisplayStart: 0;
+    iDisplayLength: 12;
+    iSortCol_0: 1;
+    sSortDir_0: 'desc';
+    _t_s_: number;
+  };
+  
+  export type SignLogResponse = {
+    sEcho: number;
+    iDisplayStart: number;
+    iDisplayLength: number;
+    iSortColList: number[];
+    sSortDirList: string[];
+    iTotalRecords: number;
+    iTotalDisplayRecords: number;
+    aaData: RootObjectAaData[];
+  };
+  type RootObjectAaData = {
+    REDFLAG: string;
+    TW: string;
+    DKRQ: string;
+    DQZT: string;
+    DKCS: number;
+    DM: string;
+    UPDATE_TIME: string;
+    DKD: string;
+    DONE_IND: string;
+  };
   
