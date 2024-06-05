@@ -65,6 +65,10 @@ export type DailySignSubmitResponse = {
          */
         dkdz: '湖南省 湘潭市 岳塘区 至善路 154号 靠近明德公寓1栋学生公寓 ',
         dkdzZb: '112.934325,27.84791',
+        /**
+         * 打卡依赖
+         */
+        dkly: 'yiban',
       
       },
       obj,
