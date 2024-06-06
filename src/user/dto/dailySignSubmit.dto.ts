@@ -69,6 +69,16 @@ export type DailySignSubmitResponse = {
          * 打卡依赖
          */
         dkly: 'yiban',
+        /**
+         * 打卡地
+         */
+        dkd: '湖南省 湘潭市',
+        jzdValue: '430000,430300,430304',
+        'jzdSheng.dm': '430000',
+        'jzdShi.dm': '430300',
+        'jzdXian.dm': '430304',
+        jzdDz: '湖南省湘潭市岳塘区福星中路88号 湖南工程学院',
+        jzdDz2: '湖南省湘潭市岳塘区福星中路88号 湖南工程学院',
       
       },
       obj,
