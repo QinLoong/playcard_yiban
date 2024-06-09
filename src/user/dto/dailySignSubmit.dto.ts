@@ -135,5 +135,25 @@ export type DailySignSubmitResponse = {
     _t_s_: number;
   };
   
-
+  export type SignLogResponse = {
+    sEcho: number;
+    iDisplayStart: number;
+    iDisplayLength: number;
+    iSortColList: number[];
+    sSortDirList: string[];
+    iTotalRecords: number;
+    iTotalDisplayRecords: number;
+    aaData: RootObjectAaData[];
+  };
+  type RootObjectAaData = {
+    REDFLAG: string;
+    TW: string;
+    DKRQ: string;
+    DQZT: string;
+    DKCS: number;
+    DM: string;
+    UPDATE_TIME: string;
+    DKD: string;
+    DONE_IND: string;
+  };
   
