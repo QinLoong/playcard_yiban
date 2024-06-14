@@ -17,6 +17,11 @@ export type TaskScopeResponseChild = {
    * @example 明德05
    */
   mc: string;
+  /**
+   * 经纬度
+   * @example 112.934321,27.84783
+   */
+  position: string;
 
 };
 
