@@ -22,7 +22,11 @@ export type TaskScopeResponseChild = {
    * @example 112.934321,27.84783
    */
   position: string;
-
+  /**
+   * 半径
+   * @example 300
+   */
+  radius: string;
 };
 
 export type TaskScopeRequest = {
