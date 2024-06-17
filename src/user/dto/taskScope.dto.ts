@@ -35,3 +35,15 @@ export type TaskScopeRequest = {
   _t_s_: string;
 };
 
+export function getTaskScopeRequest(
+  obj?: Partial<TaskScopeRequest>,
+): TaskScopeRequest {
+  return Object.assign(
+    {
+      task: '',
+      sslRadius: '',
+      _t_s_: Date.now().toString(),
+    },
+    obj,
+  );
+}
