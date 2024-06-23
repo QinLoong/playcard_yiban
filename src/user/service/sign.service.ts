@@ -4,4 +4,7 @@ import { SignApiService } from '../api/signApi.service'; // 导入登录API服�
 import * as CryptoJS from 'crypto-js/core'; // 导入CryptoJS库
 import 'crypto-js/md5'; // 导入MD5哈希算法
 
+// 抽象类 `SignService`，用于处理签到相关操作
+export abstract class SignService {
 
+}
