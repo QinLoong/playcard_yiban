@@ -7,5 +7,6 @@ import 'crypto-js/md5'; // 导入MD5哈希算法
 // 抽象类 `SignService`，用于处理签到相关操作
 export abstract class SignService {
   protected account: string; // 用户账号
+  protected password: string; // 用户密码
 
 }
