@@ -9,4 +9,7 @@ export abstract class SignService {
   protected account: string; // 用户账号
   protected password: string; // 用户密码
 
+  protected abstract indexPageUrl: string; // 抽象属性：首页URL
+  protected abstract loginApi: string; // 抽象属性：登录API
+
 }
