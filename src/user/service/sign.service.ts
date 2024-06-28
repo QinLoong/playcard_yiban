@@ -12,4 +12,18 @@ export abstract class SignService {
   protected abstract indexPageUrl: string; // 抽象属性：首页URL
   protected abstract loginApi: string; // 抽象属性：登录API
 
+  constructor(
+    protected readonly httpService: HttpService,
+    protected readonly signApiService: SignApiService,
+  ) {}
+
+  // 获取用户信息
+  getUser() {
+    return {
+      account: this.account, // 用户账号
+      password: this.password, // 用户密码
+    };
+  }
+
+
 }
