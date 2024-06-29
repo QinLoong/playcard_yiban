@@ -25,5 +25,11 @@ export abstract class SignService {
     };
   }
 
+  // 设置用户信息
+  setUser(options: IUserOptions) {
+    this.account = options.account; // 设置用户账号
+    this.password = options.password; // 设置用户密码
+  }
+
 
 }
