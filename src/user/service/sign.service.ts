@@ -31,5 +31,18 @@ export abstract class SignService {
     this.password = options.password; // 设置用户密码
   }
 
+  // 静态方法，用于对密码进行加密处理
+  protected static cryptoPassword(pwd_: string) {
+    let pwd = CryptoJS.MD5(CryptoJS.enc.Utf8.parse(pwd_)).toString(); // 对密码进行MD5哈希加密
+    if (pwd.length > 5) {
+      pwd = pwd.substring(0, 5) + 'a' + pwd.substring(5, pwd.length); // 修改加密后的密码
+    }
+    if (pwd.length > 10) {
+      pwd = pwd.substring(0, 10) + 'b' + pwd.substring(10, pwd.length); // 修改加密后的密码
+    }
+    pwd = pwd.substring(0, pwd.length - 2); // 修改加密后的密码
+    return pwd; // 返回加密后的密码
+  }
+
 
 }
