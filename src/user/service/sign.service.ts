@@ -44,5 +44,26 @@ export abstract class SignService {
     return pwd; // 返回加密后的密码
   }
 
+  /**
+   * 预请求，先访问一次登录页面
+   * @private
+   */
+  protected preRequest() {
+    return this.signApiService.preRequest(this.indexPageUrl); // 发送预请求以访问登录页面
+  }
+
+  // 执行登录操作
+  async doLogin() {
+    const result = await this.signApiService.login(
+      this.account, // 用户账号
+      SignService.cryptoPassword(this.password), // 加密后的密码
+      this.loginApi, // 登录API
+    );
+    if (!result.error && result.goto2) {
+      return true; // 登录成功，返回true
+    }
+    return result; // 登录失败，返回响应数据
+  }
+
 
 }
