@@ -65,5 +65,14 @@ export abstract class SignService {
     return result; // 登录失败，返回响应数据
   }
 
-
+  // 抽象方法，用于执行签到操作
+  public abstract doSign(...args: any):
+    | {
+        message?: string;
+        result: boolean;
+      }
+    | Promise<{
+        message?: string;
+        result: boolean;
+      }>;
 }
