@@ -50,7 +50,7 @@ export class DailySignService extends SignService {
   }
 
   /**
-   * 今天是否已经签到过了
+   * 今天是否已经签到过
    */
   async isSign() {
     const result = await this.dailySignApiService.getSignLog();
